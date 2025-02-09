@@ -1,0 +1,61 @@
+body {
+  background-color: #b6d0e2;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #0c94f5;
+  display: flex;
+  justify-content: space-between;
+  height: 1.5rem;
+}
+
+.navbar-left {
+  margin-left: 1rem;
+}
+.navbar-middle {
+  color: red;
+}
+.navbar-right {
+  margin-right: 1rem;
+}
+
+.affirmation {
+  border: 1px solid red;
+  width: fit-content;
+}
+.affirmation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.add-affirmation-container {
+  width: 100%;
+  justify-content: end;
+  display: flex;
+  height: 2rem;
+  align-items: center;
+}
+.plus-affirmation {
+  background-color: rgb(233, 233, 233);
+  border: 1px rgb(172, 172, 172) solid;
+  border-radius: 100%;
+  transition-timing-function: ease-in;
+  transition: 0.5s;
+  height: fit-content;
+  width: fit-content;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+.plus-affirmation:hover {
+  background-color: rgb(87, 87, 87);
+  border: 1px rgb(87, 87, 87) solid;
+  color: white;
+  transition: 0.5s;
+  transition-timing-function: ease-out;
+}
