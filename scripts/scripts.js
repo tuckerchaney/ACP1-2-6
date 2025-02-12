@@ -1,5 +1,9 @@
 const headwordElement = document.querySelector(".affirmation-headword");
 const quoteElement = document.querySelector(".affirmation-quote");
+const generatebtn = document.getElementById("generateBtn");
+const addaffirmationpage = document.getElementById("add-affirmation-overlay");
+const addpageopener = document.querySelector(".plus-affirmation");
+const addPageRemove = document.querySelector(".add-page-submit");
 const affirmations = [
   {
     headword: "I am proud of myself",
@@ -42,6 +46,10 @@ const affirmations = [
   },
 ];
 
+generatebtn.addEventListener("click", generatequotehandler);
+addpageopener.addEventListener("click", addPage);
+addPageRemove.addEventListener("click", removeAddPage);
+
 // function affirmationsArray() {
 //   const affirmationsHeadword = affirmations.map(
 //     (affirmation) => affirmation.headword
@@ -65,5 +73,19 @@ function randomAffirmationGenerator() {
   headwordElement.innerHTML = randomAffirmation.headword;
   quoteElement.innerHTML = randomAffirmation.quote;
 }
-// affirmationsArray();
+function generatequotehandler() {
+  const randomIndex = Math.floor(Math.random() * affirmations.length);
+  const randomAffirmation = affirmations[randomIndex];
+  headwordElement.innerHTML = randomAffirmation.headword;
+  quoteElement.innerHTML = randomAffirmation.quote;
+}
+function addPage() {
+  addaffirmationpage.classList.add("add-affirmation-enable");
+  addaffirmationpage.classList.remove("add-affirmation-hide");
+}
+function removeAddPage() {
+  addaffirmationpage.classList.add("add-affirmation-hide");
+  addaffirmationpage.classList.remove("add-affirmation-enable");
+}
+
 randomAffirmationGenerator();

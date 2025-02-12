@@ -10,11 +10,26 @@
   <script src="../scripts/scripts.js" defer></script>
 
   <body>
+    <div class="add-affirmation-hide" id="add-affirmation-overlay">
+      <div class="add-page-visible">
+        <div class="affirmation-add-box">
+          <div class="affirmation-add-headword">
+            <span>Headword:</span><input type="text" />
+          </div>
+          <div class="affirmation-add-quote">
+            <span>Quote:</span><input type="text" />
+          </div>
+          <button class="add-page-submit">Submit</button>
+        </div>
+      </div>
+      <div class="backdrop-blur"></div>
+    </div>
     <div class="navbar">
       <div class="navbar-left">navbar left</div>
       <div class="navbar-middle">navbar middle</div>
       <div class="navbar-right">navbar right</div>
     </div>
+
     <div class="add-affirmation-container">
       <button class="plus-affirmation">+</button>
     </div>
@@ -22,6 +37,9 @@
       <div class="affirmation">
         <div class="affirmation-headword">Headword</div>
         <div class="affirmation-quote">Quote</div>
+      </div>
+      <div class="generate-container">
+        <button class="generate-btn" id="generateBtn">New Quote</button>
       </div>
     </div>
   </body>
