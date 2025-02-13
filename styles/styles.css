@@ -55,7 +55,44 @@ body {
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
+.add-page-submit {
+  width: 4rem;
+  margin-left: 7.8rem;
+  border-radius: 12%;
+  border: 1px solid rgb(87, 87, 87);
+}
+.add-page-submit:hover {
+  background-color: rgb(87, 87, 87);
+  color: white;
+  transition: 0.5s;
+  transition-timing-function: ease-out;
+  border-radius: 12%;
+}
+
+.affirmation-add-headword {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+.affirmation-add-quote {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+.add-page-submitdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .affirmation {
   width: 25rem;
   position: absolute;
@@ -98,7 +135,8 @@ body {
   margin-right: 2rem;
   margin-top: 2rem;
 }
-.plus-affirmation:hover {
+.plus-affirmation:hover,
+.generate-btn:hover {
   background-color: rgb(87, 87, 87);
   border: 1px rgb(87, 87, 87) solid;
   color: white;
@@ -119,10 +157,10 @@ body {
   transition-timing-function: ease-in;
   transition: 0.5s;
 }
-.generate-btn:hover {
+/* .generate-btn:hover {
   background-color: rgb(87, 87, 87);
   border: 1px rgb(87, 87, 87) solid;
   color: white;
   transition: 0.5s;
   transition-timing-function: ease-out;
-}
+} */

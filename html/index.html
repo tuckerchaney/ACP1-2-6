@@ -9,6 +9,9 @@
 
   <script src="../scripts/scripts.js" defer></script>
 
+  <!-- Add a main tag with bulk of html. use an (aside?) tag for add page -->
+  <!-- You can also use comments to seperate sections of code -->
+
   <body>
     <div class="add-affirmation-hide" id="add-affirmation-overlay">
       <div class="add-page-visible">
@@ -18,18 +21,31 @@
           </div>
           <div class="affirmation-add-quote">
             <span>Quote:</span><input type="text" />
-          </div>
+          </div id='add-page-submitdiv'>
           <button class="add-page-submit">Submit</button>
         </div>
       </div>
       <div class="backdrop-blur"></div>
     </div>
     <div class="navbar">
-      <div class="navbar-left">navbar left</div>
+      <div class="navbar-left"><a href="index.html">navbar left</a></div>
       <div class="navbar-middle">navbar middle</div>
       <div class="navbar-right">navbar right</div>
     </div>
-
+    <div class="add-affirmation-hide" id="add-affirmation-overlay">
+      <div class="add-page-visible">
+        <div class="affirmation-add-box">
+          <div class="affirmation-add-headword">
+            <span>Headword:</span><input class="add-input" type="text" />
+          </div>
+          <div class="affirmation-add-quote">
+            <span>Quote:</span><input class="add-input" type="text" />
+          </div>
+            <button class="add-page-submit">Submit</button>
+        </div>
+      </div>
+      <div class="backdrop-blur"></div>
+    </div>
     <div class="add-affirmation-container">
       <button class="plus-affirmation">+</button>
     </div>
