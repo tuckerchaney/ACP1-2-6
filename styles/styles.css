@@ -7,6 +7,13 @@ body {
   min-height: 100vh;
 }
 
+/* #b6d0e2 */
+
+/* #cfe0e8 – A light, airy blue-gray
+#d5e8d4 – A soft, pale green
+#fdebd3 – A warm, light peach
+#e6dad2 – A gentle, muted taupe
+#f4e1d2 – A creamy, off-white beige */
 .navbar {
   background-color: #0c94f5;
   display: flex;
@@ -142,6 +149,7 @@ body {
   color: white;
   transition: 0.5s;
   transition-timing-function: ease-out;
+  cursor: pointer;
 }
 
 .generate-container {
@@ -156,6 +164,7 @@ body {
   border: 1px rgb(172, 172, 172) solid;
   transition-timing-function: ease-in;
   transition: 0.5s;
+  cursor: pointer;
 }
 /* .generate-btn:hover {
   background-color: rgb(87, 87, 87);

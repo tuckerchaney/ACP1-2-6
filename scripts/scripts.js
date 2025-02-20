@@ -4,6 +4,15 @@ const generatebtn = document.getElementById("generateBtn");
 const addaffirmationpage = document.getElementById("add-affirmation-overlay");
 const addpageopener = document.querySelector(".plus-affirmation");
 const addPageRemove = document.querySelector(".add-page-submit");
+const soothingColors = [
+  "#b6d0e2",
+  "#cfe0e8",
+  "#d5e8d4",
+  "#fdebd3",
+  "#e6dad2",
+  "#f4e1d2",
+];
+
 const affirmations = [
   {
     headword: "I am proud of myself",
@@ -46,7 +55,10 @@ const affirmations = [
   },
 ];
 
-generatebtn.addEventListener("click", generatequotehandler);
+generatebtn.addEventListener("click", () => {
+  generatequotehandler();
+  randomSoothingColor();
+});
 addpageopener.addEventListener("click", addPage);
 addPageRemove.addEventListener("click", removeAddPage);
 
@@ -87,5 +99,11 @@ function removeAddPage() {
   addaffirmationpage.classList.add("add-affirmation-hide");
   addaffirmationpage.classList.remove("add-affirmation-enable");
 }
+function randomSoothingColor() {
+  const randomIndex = Math.floor(Math.random() * soothingColors.length);
+  const randomColor = soothingColors[randomIndex];
+  document.body.style.backgroundColor = randomColor;
+}
 
 randomAffirmationGenerator();
+randomSoothingColor();
