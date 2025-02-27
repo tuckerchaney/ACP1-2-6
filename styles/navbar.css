@@ -1,0 +1,16 @@
+.navbar {
+  background-color: #0c94f5;
+  display: flex;
+  justify-content: space-between;
+  height: 1.5rem;
+}
+
+.navbar-left {
+  margin-left: 1rem;
+}
+.navbar-middle {
+  color: red;
+}
+.navbar-right {
+  margin-right: 1rem;
+}

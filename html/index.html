@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/affirmations.css" />
+    <link rel="stylesheet" href="../styles/buttons.css" />
+    <link rel="stylesheet" href="../styles/layout.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/overlay.css" />
   </head>
 
   <script src="../scripts/scripts.js" defer></script>
@@ -13,7 +18,8 @@
   <!-- You can also use comments to seperate sections of code -->
 
   <body>
-    <div class="add-affirmation-hide" id="add-affirmation-overlay">
+    <!-- Add Affirmation Page-->
+    <aside class="add-affirmation-hide" id="add-affirmation-overlay">
       <div class="add-page-visible">
         <div class="affirmation-add-box">
           <div class="affirmation-add-headword">
@@ -21,18 +27,34 @@
           </div>
           <div class="affirmation-add-quote">
             <span>Quote:</span><input type="text" />
-          </div id='add-page-submitdiv'>
+          </div>
           <button class="add-page-submit">Submit</button>
         </div>
       </div>
+      <!-- Blurred div -->
       <div class="backdrop-blur"></div>
-    </div>
-    
-    <div class="navbar">
-      <div class="navbar-left"><a href="index.html">navbar left</a></div>
-      <div class="navbar-middle">navbar middle</div>
-      <div class="navbar-right">navbar right</div>
-    </div>
+    </aside>
+
+    <!-- View Affirmations Page -->
+    <aside class="view-affirmations-hide" id="view-affirmations-overlay">
+      <div class="view-page-visible">
+        <div class="affirmation-view-box"></div>
+        <div class="affirmations-list-view"></div>
+        <div class="affirmations-list-delete"></div>
+      </div>
+      <div class="backdrop-blur"></div>
+    </aside>
+
+    <!-- Navbar code -->
+
+    <header class="navbar">
+      <div class="navbar-left"><a href="index.html">Replace with Logo</a></div>
+      <div class="navbar-middle">Search Bar Maybe?</div>
+      <div class="navbar-right">Not sure yet</div>
+    </header>
+
+    <!-- Main HTML -->
+
     <div class="add-affirmation-hide" id="add-affirmation-overlay">
       <div class="add-page-visible">
         <div class="affirmation-add-box">
@@ -42,12 +64,13 @@
           <div class="affirmation-add-quote">
             <span>Quote:</span><input class="add-input" type="text" />
           </div>
-            <button class="add-page-submit">Submit</button>
+          <button class="add-page-submit">Submit</button>
         </div>
       </div>
       <div class="backdrop-blur"></div>
     </div>
     <div class="add-affirmation-container">
+      <button class="view-affirmations">PH</button>
       <button class="plus-affirmation">+</button>
     </div>
     <div class="affirmation-container">
@@ -55,6 +78,9 @@
         <div class="affirmation-headword">Headword</div>
         <div class="affirmation-quote">Quote</div>
       </div>
+
+      <!-- Generate New Button -->
+
       <div class="generate-container">
         <button class="generate-btn" id="generateBtn">New Quote</button>
       </div>

@@ -1,0 +1,55 @@
+.affirmation {
+  width: 25rem;
+  position: absolute;
+}
+
+.affirmation-headword {
+  text-decoration: underline;
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  color: #bd4b4b;
+  margin-bottom: 10px;
+}
+
+.affirmation-quote {
+  font-family: "Verdana", sans-serif;
+  font-size: 1rem;
+  color: #718096;
+  line-height: 1.6;
+}
+
+.affirmation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.affirmation-add-box {
+  background-color: #f5f5f3;
+  height: 18rem;
+  width: 20rem;
+  border-radius: 4%;
+  border: 1.3px solid rgb(151, 151, 151);
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.affirmation-add-headword {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+.affirmation-add-quote {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}

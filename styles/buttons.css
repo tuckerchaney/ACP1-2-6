@@ -1,0 +1,58 @@
+.add-page-submit {
+  width: 4rem;
+  margin-left: 7.8rem;
+  border-radius: 12%;
+  border: 1px solid rgb(87, 87, 87);
+}
+
+.add-page-submit:hover {
+  background-color: rgb(87, 87, 87);
+  color: white;
+  transition: 0.5s;
+  transition-timing-function: ease-out;
+  border-radius: 12%;
+}
+
+.plus-affirmation {
+  background-color: rgb(206, 205, 205);
+  border: 1px rgb(172, 172, 172) solid;
+  border-radius: 100%;
+  transition-timing-function: ease-in;
+  transition: 0.5s;
+  height: fit-content;
+  width: fit-content;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
+.view-affirmations {
+  background-color: rgb(206, 205, 205);
+  border: 1px rgb(172, 172, 172) solid;
+  border-radius: 100%;
+  transition-timing-function: ease-in;
+  transition: 0.5s;
+  height: fit-content;
+  width: fit-content;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.generate-btn {
+  border-radius: 10px;
+  background-color: rgb(206, 205, 205);
+  border: 1px rgb(172, 172, 172) solid;
+  transition-timing-function: ease-in;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.plus-affirmation:hover,
+.generate-btn:hover,
+.view-affirmations:hover {
+  background-color: rgb(87, 87, 87);
+  border: 1px rgb(87, 87, 87) solid;
+  color: white;
+  transition: 0.5s;
+  transition-timing-function: ease-out;
+  cursor: pointer;
+}

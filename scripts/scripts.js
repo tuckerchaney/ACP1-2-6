@@ -4,6 +4,7 @@ const generatebtn = document.getElementById("generateBtn");
 const addaffirmationpage = document.getElementById("add-affirmation-overlay");
 const addpageopener = document.querySelector(".plus-affirmation");
 const addPageRemove = document.querySelector(".add-page-submit");
+const viewPageOpener = document.querySelector(".view-affirmations");
 const soothingColors = [
   "#b6d0e2",
   "#cfe0e8",
@@ -62,6 +63,8 @@ generatebtn.addEventListener("click", () => {
 addpageopener.addEventListener("click", addPage);
 addPageRemove.addEventListener("click", removeAddPage);
 
+viewPageOpener.addEventListener("click", viewPage);
+
 // function affirmationsArray() {
 //   const affirmationsHeadword = affirmations.map(
 //     (affirmation) => affirmation.headword
@@ -103,6 +106,14 @@ function randomSoothingColor() {
   const randomIndex = Math.floor(Math.random() * soothingColors.length);
   const randomColor = soothingColors[randomIndex];
   document.body.style.backgroundColor = randomColor;
+}
+function viewPage() {
+  addaffirmationpage.classList.add("view-affirmations-enable");
+  addaffirmationpage.classList.remove("view-affirmations-hide");
+}
+function removeViewPage() {
+  addaffirmationpage.classList.add("view-affirmations-hide");
+  addaffirmationpage.classList.remove("view-affirmations-enable");
 }
 
 randomAffirmationGenerator();

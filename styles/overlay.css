@@ -1,0 +1,33 @@
+.backdrop-blur {
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  backdrop-filter: blur(2px);
+}
+
+.add-page-visible {
+  z-index: 1000;
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+}
+
+.add-affirmation-enable {
+  visibility: inherit;
+}
+
+.add-affirmation-hide {
+  visibility: hidden;
+}
+
+.view-affirmations-enable {
+  visibility: inherit;
+}
+
+.view-affirmations-hide {
+  visibility: hidden;
+}
