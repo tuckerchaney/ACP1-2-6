@@ -26,7 +26,8 @@
   flex-direction: column;
 }
 
-.affirmation-add-box {
+.affirmation-add-box,
+.affirmation-view-box {
   background-color: #f5f5f3;
   height: 18rem;
   width: 20rem;
@@ -38,6 +39,11 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
+}
+
+.affirmation-view-box {
+  height: 18rem;
+  overflow-y: auto;
 }
 
 .affirmation-add-headword {
@@ -52,4 +58,8 @@
   justify-content: space-between;
   margin-left: 0.8rem;
   margin-right: 0.8rem;
+}
+
+.affirmations-list-view {
+  /* TSK */
 }

@@ -6,7 +6,8 @@
   backdrop-filter: blur(2px);
 }
 
-.add-page-visible {
+.add-page-visible,
+.view-page-visible {
   z-index: 1000;
   position: absolute;
   display: flex;
@@ -16,18 +17,12 @@
   flex-direction: column;
 }
 
-.add-affirmation-enable {
-  visibility: inherit;
-}
-
-.add-affirmation-hide {
-  visibility: hidden;
-}
-
+.add-affirmation-enable,
 .view-affirmations-enable {
   visibility: inherit;
 }
 
+.add-affirmation-hide,
 .view-affirmations-hide {
   visibility: hidden;
 }

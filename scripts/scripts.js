@@ -2,9 +2,22 @@ const headwordElement = document.querySelector(".affirmation-headword");
 const quoteElement = document.querySelector(".affirmation-quote");
 const generatebtn = document.getElementById("generateBtn");
 const addaffirmationpage = document.getElementById("add-affirmation-overlay");
+const viewAffirmationsPage = document.getElementById(
+  "view-affirmations-overlay"
+);
 const addpageopener = document.querySelector(".plus-affirmation");
 const addPageRemove = document.querySelector(".add-page-submit");
 const viewPageOpener = document.querySelector(".view-affirmations");
+const affirmationsList = document.querySelector(".affirmations-list");
+
+// Add Affirmation Page
+const headwordInput = document.getElementById("headword-input");
+const quoteInput = document.getElementById("quote-input");
+const submitButton = document.getElementById("submit-button");
+
+// Close Button
+const closeButtons = document.querySelectorAll(".close-button");
+
 const soothingColors = [
   "#b6d0e2",
   "#cfe0e8",
@@ -14,7 +27,7 @@ const soothingColors = [
   "#f4e1d2",
 ];
 
-const affirmations = [
+let affirmations = [
   {
     headword: "I am proud of myself",
     quote: "I believe in my goals and dreams, and I can get through anything",
@@ -64,20 +77,26 @@ addpageopener.addEventListener("click", addPage);
 addPageRemove.addEventListener("click", removeAddPage);
 
 viewPageOpener.addEventListener("click", viewPage);
+submitButton.addEventListener("click", addAffirmation);
 
-// function affirmationsArray() {
-//   const affirmationsHeadword = affirmations.map(
-//     (affirmation) => affirmation.headword
-//   );
-//   const affirmationsQuote = affirmations.map(
-//     (affirmation) => affirmation.quote
-//   );
-//   const affirmationsId = affirmations.map((affirmation) => affirmation.id);
+closeButtons.forEach((closeButton) => {
+  closeButton.addEventListener("click", closeAllPages);
+});
 
-//   console.log(affirmationsHeadword);
-//   console.log(affirmationsQuote);
-//   console.log(affirmationsId);
-// }
+function addAffirmation() {
+  const headword = headwordInput.value;
+  const quote = quoteInput.value;
+
+  const id = affirmations.length + 1;
+
+  const newAffirmation = { headword: headword, quote: quote, id: id };
+
+  affirmations.push(newAffirmation);
+  affirmationsList.innerHTML = "";
+  headwordInput.value = "";
+  quoteInput.value = "";
+  removeAddPage();
+}
 
 function randomAffirmationGenerator() {
   const randomIndex = Math.floor(Math.random() * affirmations.length);
@@ -108,12 +127,46 @@ function randomSoothingColor() {
   document.body.style.backgroundColor = randomColor;
 }
 function viewPage() {
-  addaffirmationpage.classList.add("view-affirmations-enable");
-  addaffirmationpage.classList.remove("view-affirmations-hide");
+  viewAffirmationsPage.classList.add("view-affirmations-enable");
+  viewAffirmationsPage.classList.remove("view-affirmations-hide");
+  populateAffirmations();
 }
 function removeViewPage() {
-  addaffirmationpage.classList.add("view-affirmations-hide");
-  addaffirmationpage.classList.remove("view-affirmations-enable");
+  viewAffirmationsPage.classList.add("view-affirmations-hide");
+  viewAffirmationsPage.classList.remove("view-affirmations-enable");
+}
+
+function populateAffirmations() {
+  affirmations.forEach((affirmation) => {
+    const affirmationElement = document.createElement("div");
+    affirmationElement.innerHTML = `
+    <h3>${affirmation.headword}</h3>
+    <p>${affirmation.quote}</p>
+    <button data-id="${affirmation.id}" class="delete-affirmation-button">Delete</button>
+    `;
+    affirmationsList.appendChild(affirmationElement);
+  });
+
+  document.querySelectorAll(".delete-affirmation-button").forEach((button) => {
+    button.addEventListener("click", deleteAffirmation);
+  });
+}
+
+function deleteAffirmation(event) {
+  const id = event.target.getAttribute("data-id");
+  const newAffirmations = affirmations.filter(
+    (affirmation) => affirmation.id !== parseInt(id)
+  );
+
+  affirmations = newAffirmations;
+  affirmationsList.innerHTML = "";
+  populateAffirmations();
+}
+
+function closeAllPages() {
+  removeViewPage();
+  removeAddPage();
+  affirmationsList.innerHTML = "";
 }
 
 randomAffirmationGenerator();

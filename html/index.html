@@ -22,65 +22,66 @@
     <aside class="add-affirmation-hide" id="add-affirmation-overlay">
       <div class="add-page-visible">
         <div class="affirmation-add-box">
+          <button class="close-button">X</button>
           <div class="affirmation-add-headword">
-            <span>Headword:</span><input type="text" />
+            <span>Headword:</span><input type="text" id="headword-input" />
           </div>
           <div class="affirmation-add-quote">
-            <span>Quote:</span><input type="text" />
+            <span>Quote:</span><input type="text" id="quote-input" />
           </div>
-          <button class="add-page-submit">Submit</button>
+          <button class="add-page-submit" id="submit-button">Submit</button>
         </div>
       </div>
-      <!-- Blurred div -->
+
       <div class="backdrop-blur"></div>
     </aside>
+    <!-- Add Affirmation Page-->
 
     <!-- View Affirmations Page -->
     <aside class="view-affirmations-hide" id="view-affirmations-overlay">
       <div class="view-page-visible">
-        <div class="affirmation-view-box"></div>
-        <div class="affirmations-list-view"></div>
-        <div class="affirmations-list-delete"></div>
-      </div>
-      <div class="backdrop-blur"></div>
-    </aside>
-
-    <!-- Navbar code -->
-
-    <header class="navbar">
-      <div class="navbar-left"><a href="index.html">Replace with Logo</a></div>
-      <div class="navbar-middle">Search Bar Maybe?</div>
-      <div class="navbar-right">Not sure yet</div>
-    </header>
-
-    <!-- Main HTML -->
-
-    <div class="add-affirmation-hide" id="add-affirmation-overlay">
-      <div class="add-page-visible">
-        <div class="affirmation-add-box">
-          <div class="affirmation-add-headword">
-            <span>Headword:</span><input class="add-input" type="text" />
-          </div>
-          <div class="affirmation-add-quote">
-            <span>Quote:</span><input class="add-input" type="text" />
-          </div>
-          <button class="add-page-submit">Submit</button>
+        <div class="affirmation-view-box">
+          <button class="close-button">X</button>
+          <div class="affirmations-list"></div>
         </div>
       </div>
       <div class="backdrop-blur"></div>
-    </div>
-    <div class="add-affirmation-container">
-      <button class="view-affirmations">PH</button>
+    </aside>
+    <!-- View Affirmations Page -->
+
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="navbar-left">
+        <a href="index.html"
+          ><img class="logo-img" src="../pngwing.com.png" alt=""
+        /></a>
+      </div>
+      <div class="navbar-middle"></div>
+      <div class="navbar-right">
+        <a href="https://linktr.ee/tucker.chaney" target="_blank"
+          ><img class="logo-img" src="../linktree-seeklogo.png" alt=""
+        /></a>
+      </div>
+    </header>
+    <!-- Navbar -->
+
+    <!-- Site Action Buttons -->
+    <div class="action-buttons-container">
+      <!-- View All Affirmations Button -->
+      <button class="view-affirmations">View</button>
+
+      <!-- Add Affirmations Button -->
       <button class="plus-affirmation">+</button>
     </div>
+
+    <!-- Generated Affirmations Display -->
     <div class="affirmation-container">
       <div class="affirmation">
         <div class="affirmation-headword">Headword</div>
         <div class="affirmation-quote">Quote</div>
       </div>
 
-      <!-- Generate New Button -->
-
+      <!-- Cycle Affimations Button -->
       <div class="generate-container">
         <button class="generate-btn" id="generateBtn">New Quote</button>
       </div>
